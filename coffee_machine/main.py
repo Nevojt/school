@@ -73,15 +73,15 @@ def proces_money(money):
     change = money - cost_coffee
     if user_input == "espresso":
         if money >= MENU["espresso"]["cost"]:
-            print(f"This is your balance: {change}")
+            print(f"This is your balance: {round(change, 2)}")
             resource_func()
     elif user_input == "latte":
         if money >= MENU["latte"]["cost"]:
-            print(f"This is your balance: {change}")
+            print(f"This is your balance: {round(change, 2)}")
             resource_func()
     elif user_input == "cappuccino":
         if money >= MENU["cappuccino"]["cost"]:
-            print(f"This is your balance: {change}")
+            print(f"This is your balance: {round(change, 2)}")
             resource_func()
     else:
         print("Sorry, that's not enough money. ")
@@ -109,7 +109,7 @@ def input_coins():
     pennies = int(input("how many pennies?: "))
     money += pennies * 0.01
     print(f"It's you money {round(money, 2)}")
-    proces_money(money)
+    proces_money(round(money, 2))
 
 
 while True:
