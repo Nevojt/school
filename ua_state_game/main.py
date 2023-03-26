@@ -13,7 +13,7 @@ data = pandas.read_csv("state_ua.csv")
 all_state = data["state"].to_list()
 guessed_states = []
 
-while len(guessed_states) < 50:
+while len(guessed_states) < 24:
     answer_state = screen.textinput(title=f"{len(guessed_states)}/24 Областей", prompt="Яку область вибереш?").title()
 
     if answer_state == "Вихід":
