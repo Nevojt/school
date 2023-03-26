@@ -17,17 +17,13 @@ while len(guessed_states) < 24:
     answer_state = screen.textinput(title=f"{len(guessed_states)}/24 Областей", prompt="Яку область вибереш?").title()
 
     if answer_state == "Вихід":
-        # missing_state = []
-        # for state in all_state:
-        #     if state not in guessed_states:
-        #         missing_state.append(state)
-        # new_data = pandas.DataFrame(missing_state)
-        # new_data.to_csv("states.csv")
+        missing_state = [state for state in all_state if state not in guessed_states]
         break
     
     if answer_state in  all_state:
         guessed_states.append(answer_state)
         t = turtle.Turtle()
+        t.color("red")
         t.hideturtle()
         t.penup()
         state_data = data[data.state == answer_state]
