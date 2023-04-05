@@ -95,16 +95,6 @@ suma_label.grid(row=4, column=3, padx=10, pady=15)
 razem = ttk.Label(window, text="0", font=("Arial", 12, "bold"))
 razem.grid(row=4, column=4, padx=10, pady=15)
 
-# karton(), folia(), butelka(), suma(),
-
-
-
-
-
-
-
-
-
 
 
 window.mainloop()
