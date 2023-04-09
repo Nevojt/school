@@ -1,11 +1,11 @@
-##################### Extra Hard Starting Project ######################
+
 import smtplib
 import random as rd
 import datetime as dt
 import pandas as pd
 
-MY_EMAIL ="dmnevoit@gmail.com"
-PASSWORD = "gyouoblchumfzrgi"
+MY_EMAIL ="your_mail@gmail.com"
+PASSWORD = "your_password"
 
 today = dt.datetime.now() # get current date and time
 today_tuple = (today.month, today.day) # Створює в форматі tuple місяць і день
