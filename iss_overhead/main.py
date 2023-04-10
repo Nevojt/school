@@ -6,8 +6,8 @@ import time
 
 MY_LAT = 51.9264108 # Your latitude
 MY_LONG = 15.4800003 # Your longitude
-MY_EMAIL ="dmnevoit@gmail.com" # Your email address
-PASSWORD = "gyouoblchumfzrgi" # Your password
+MY_EMAIL ="YOUt@gmail.com" # Your email address
+PASSWORD = "YOUPASSWORD" # Your password
 
 # Check if the ISS is overheads
 def is_iss_overhead(): 
@@ -48,7 +48,7 @@ def message():
         connection.login(MY_EMAIL, PASSWORD)
         connection.sendmail(
             from_addr=MY_EMAIL,
-            to_addrs="dmnevoit@yahoo.com",
+            to_addrs="to_mail@yahoo.com",
             msg=f"Subject:MKC\n\n{message}".encode('utf-8')
                 )
 while True:
