@@ -2,14 +2,14 @@ import requests
 from twilio.rest import Client
 
 
-API_KEY = "431ed2e885ce6b4fb6475bf2713743dc"
+API_KEY = API
 OWM_Endpoint = "https://api.openweathermap.org/data/2.5/forecast"
 MY_LAT = 51.9264108
 MY_LONG = 15.4800003
 
 # Twilio
-TWILIO_ACCOUNT_SID = "AC37953429152e6daa7dcea3f3aa247063"
-TWILIO_AUTH_TOKEN = "e21689d29aa8382d3d70a31eec03fdad"
+TWILIO_ACCOUNT_SID = "you SID"
+TWILIO_AUTH_TOKEN = "you TOKEN"
 
 parameters = {
     "lat": MY_LAT,
@@ -39,7 +39,7 @@ if will_rain:
     message = client.messages \
                 .create(
                      body="Візьми зонтик. Сьогодні буде дощ. ☂️",
-                     from_='+19416771379',
-                     to='+48534037393'
+                     from_='number TWILIO',
+                     to='you number'
                  )
 print(message.status)
