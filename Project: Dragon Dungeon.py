@@ -33,7 +33,7 @@ print('''
   ((          $$$$$$$$$$$#####       $$$$$$$$###"       "####$$$$$$$$$$
   ) \         $$$$$$$$$$$$####.     $$$$$$###"             "###$$$$$$$$$   s'
  (   )        $$$$$$$$$$$$$####.   $$$$$###"                ####$$$$$$$$s$$'
- )  ( (       $$"$$$$$$$$$$$#####.$$$$$###' -Tua Xiong     .###$$$$$$$$$$"
+ )  ( (       $$"$$$$$$$$$$$#####.$$$$$###'                .###$$$$$$$$$$"
  (  )  )   _,$"   $$$$$$$$$$$$######.$$##'                .###$$$$$$$$$$
  ) (  ( \.         "$$$$$$$$$$$$$#######,,,.          ..####$$$$$$$$$$$"
 (   )$ )  )        ,$$$$$$$$$$$$$$$$$$####################$$$$$$$$$$$"
@@ -50,9 +50,9 @@ print("Your adventure begins!!!")
 print("You light a torch and see three caves...")
 
 #Write your code below this line 👇
-healt = 0
+health = 0
 potion_fire = 0
-caves = input("Select a drection: Left, Direct or Right?\n")
+caves = input("Select a direction: Left, Direct or Right?\n")
 
 if caves == "Direct":
     print("You met Troll")
@@ -61,8 +61,8 @@ if caves == "Direct":
         print("You attack Troll!!")
         attack_left = input("Torch or Sword?\n")
         if attack_left == "Torch":
-            healt += 1
-            print("You scared the Troll, he runs awey")
+            health += 1
+            print("You scared the Troll, he runs away")
         else:
             print("You pissed off a Troll, you're a moron")
             print("Game Over.")
@@ -70,7 +70,7 @@ if caves == "Direct":
         print("You attack Troll!!")
         attack_right = input("Torch or Sword?\n")
         if attack_right == "Sword":
-            healt += 1
+            health += 1
             print("You hurt the Troll, he runs away.")
         else:
             print("You torch goes out and you die at the troll's clutches!")
@@ -82,7 +82,7 @@ elif caves == "Right":
     print("You meet a Wizard, he offers you a magic potion.")
     wizard_potion = input("Yes or No?\n")
     if wizard_potion == "No":
-        healt += 1
+        health += 1
         potion_fire += 1
         print("You get a protection potion and move on.")
     else:
@@ -91,7 +91,7 @@ elif caves == "Right":
 else:
     print("There is an abyss ahead and you will fall anto it.")
 
-if healt >= 1:
+if health >= 1:
     print("In front of you at the door")
     door = input("Which charm do you have? 'Red', 'Yellow' or  'White\n")
     if door == "Red":
