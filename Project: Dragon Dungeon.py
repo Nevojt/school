@@ -55,7 +55,7 @@ potion_fire = 0
 caves = input("Select a direction: Left, Direct or Right?\n")
 
 if caves == "Direct":
-    print("You met Troll")
+    print("You meet Troll")
     run_hero = input("You run Left, Right or Hide?\n")
     if run_hero == "Left":
         print("You attack Troll!!")
