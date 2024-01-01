@@ -1,3 +1,4 @@
+import os
 from tkinter import *
 from tkinter import messagebox
 from random import randint, choice, shuffle
@@ -54,21 +55,25 @@ def save():
         }
     }
     
+    script_dir = os.path.dirname(os.path.realpath(__file__))
+    # Створення повного шляху до файлу 'data.json'
+    file = os.path.join(script_dir, 'data.json')
+    
     if len(website) == 0 or len(password) == 0:
         messagebox.showinfo(title="Oops", message="Please make sure you haven`t left any fields empty")
     else:
         try:  
-            with open("data.json", "r") as data_file:
+            with open(file, "r") as data_file:
                 # Reading old data
                 data = json.load(data_file)
         except FileNotFoundError:
-            with open("data.json", "w") as data_file:
+            with open(file, "w") as data_file:
                 json.dump(new_data, data_file, indent=4)
         else:
             # Updating old data with new data
             data.update(new_data)
             
-            with open("data.json", "w") as data_file:
+            with open(file, "w") as data_file:
                 # Saving new data
                 json.dump(data, data_file, indent=4)
         finally:
@@ -84,7 +89,7 @@ window.title("Password Generator")
 window.config(padx=50, pady=50)
 
 canvas = Canvas(height=200, width=200)
-password_image = PhotoImage(file="logo.png")
+password_image = PhotoImage(file="password-manager/logo.png")
 canvas.create_image(100, 100, image=password_image)
 canvas.grid(row=0, column=1)
 
