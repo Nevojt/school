@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-data = pd.read_csv("nato_phonetic_alphabet.csv")
+data = pd.read_csv("NATO-alphabet-start/nato_phonetic_alphabet.csv")
 dictionary = {row.letter:row.code for (index, row) in data.iterrows()}
 
 def generate_phonetic_code():

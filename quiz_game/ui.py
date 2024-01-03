@@ -1,5 +1,6 @@
 from tkinter import *
 from quiz_brain import QuizBrain
+from PIL import Image, ImageTk
 
 THEME_COLOR = "#375362"
 
@@ -27,12 +28,16 @@ class QuizInterface:
         self.score_label = Label(self.window, text="Score: 0", bg=THEME_COLOR, fg="white", font=("Arial", 15, "bold"))
         self.score_label.grid(row=0, column=2, pady=20, columnspan=2)
         
-        true_image = PhotoImage(file="images/true.png")
-        self.true_button = Button(self.window, image=true_image, command=self.true_pressed)
-        self.true_button.grid(row=2, column=0, columnspan=2, pady=20)
+        true_image = Image.open("quiz_game/image/true.png")
+        true_image = true_image.resize((50, 50), Image.Resampling.LANCZOS)  # Resize to 50x50 or any size you want
+        self.true_image = ImageTk.PhotoImage(true_image)
+        self.true_button = Button(self.window, image=self.true_image, command=self.true_pressed)
+        self.true_button.grid(row=2, column=0, columnspan=2, pady=20, padx=20)
         
-        false_image = PhotoImage(file="images/false.png")
-        self.false_button = Button(self.window, image=false_image, command=self.false_pressed)
+        false_image = Image.open("quiz_game/image/false.png")
+        false_image = false_image.resize((50, 50), Image.Resampling.LANCZOS)  # Resize to 50x50 or any size you want
+        self.false_image = ImageTk.PhotoImage(false_image)
+        self.false_button = Button(self.window, image=self.false_image, command=self.false_pressed)
         self.false_button.grid(row=2, column=2, columnspan=2, pady=20)
         
         self.get_next_question()
