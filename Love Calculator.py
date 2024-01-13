@@ -4,18 +4,18 @@ name2 = input("What is their name? \n")
 
 name = name1.lower() + name2.lower()
 name_true = 0
-name_1 = name.count('t')
-name_2 = name.count('r')
-name_3 = name.count('u')
-name_4 = name.count('e')
-name_true += name_1 + name_2 + name_3 + name_4
+t = name.count('t')
+r = name.count('r')
+u = name.count('u')
+e = name.count('e')
+name_true += t + r + u + e
 
 name_love = 0
-love_1 = name.count('l')
-love_2 = name.count('o')
-love_3 = name.count('v')
-love_4 = name.count('e')
-name_love += love_1 + love_2 + love_3 + love_4
+l = name.count('l')
+o = name.count('o')
+v = name.count('v')
+e = name.count('e')
+name_love += l + o + v + e
 
 love_int = int(str(name_true) + str(name_love))
 
