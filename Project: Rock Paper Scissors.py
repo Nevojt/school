@@ -24,18 +24,21 @@ scissors = '''
       (____)
 ---.__(___)
 '''
-
+# Імпортуємо модуль рандом із бібліотеки Python
 import random
 
-bot = random.randint(0, 2)
+# Присвоєння змінній функцію рандомізації
+bot = random.randint(0, 2)  # Ця функція визначає випадкове число від 0-2
 
 print("Welcome to game ROCK, PAPER, SCISSORS!!!!")
 
 user = int(input("What do you choose? Type 0 Rock, 1 Paper, 2 Scissors:\n"))
 
+# Всі цифри які більшу або менше зазначеного діапазону.
 if user >= 3 or user < 0:
   print("You lose the game!!!")
-  
+
+# Обробляємо основний функціонал
 elif bot == 0 and user == 1:
   print("Bot\n", rock)
   print("You\n", paper)
@@ -65,9 +68,10 @@ elif bot == 2 and user == 1:
   print("Bot\n", scissors)
   print("You\n", paper)
   print("You lose!!!")
-  
+
+# Всф інші випадки
 else:
-  print()
+  print("You lose the game!!!")
 
 
 
