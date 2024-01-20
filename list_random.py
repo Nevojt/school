@@ -13,7 +13,7 @@ working_home_list = ["Cooking", "Vacuum the apartment",
                      "Read the book", "Go in for sport"]
 
 # Беремо імені членів родини 
-family_list = list(input("What is your name? \n").split(", ")) # Створюємо список і розділяємо його комами
+family_list = list(input("What is name your family? \n").split(", ")) # Створюємо список і розділяємо його комами
 count_family = len(family_list) # рахуємо кількість імен в родині
 
 print()
