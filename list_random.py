@@ -12,7 +12,7 @@ working_home_list = ["Cooking", "Vacuum the apartment",
                      "To wash the floor", "Learn English",
                      "Read the book", "Go in for sport"]
 
-# Беремо імені членів родини 
+
 family_list = list(input("What is name your family? \n").split(", ")) # Створюємо список і розділяємо його комами
 count_family = len(family_list) # рахуємо кількість імен в родині
 
@@ -25,3 +25,7 @@ for work in range(count_family): # Цикл проходить по всіх і�
     # Друкуємо результат 
     print(family_list[work] + ": " + random_work)
     #family_list[work] == ім'я члена сім'ї[домашня справа]
+
+
+
+
