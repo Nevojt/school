@@ -31,35 +31,36 @@
 
 
 
-# from info_her import races_in_games, character_classes, weapons_list
-# import random
+from info_her import races_in_games, character_classes, weapons_list
+import random
 
-# # boss = f"{random.choice(races_in_games)} {random.choice(character_classes)} {random.choice(weapons_list)}"
+# boss = f"{random.choice(races_in_games)} {random.choice(character_classes)} {random.choice(weapons_list)}"
 
-# boss_race = random.choice(races_in_games)
-# boss_character = random.choice(character_classes)
-# boss_weapon = random.choice(weapons_list)
+boss_race = random.choice(races_in_games)
+boss_character = random.choice(character_classes)
+boss_weapon = random.choice(weapons_list)
 
 
-# print(f"Boss race: {boss_race}")
-# print(f"Boss character: {boss_character}")
-# print(f"Boss weapon: {boss_weapon}")
+print(f"Boss race: {boss_race}")
+print(f"Boss character: {boss_character}")
+print(f"Boss weapon: {boss_weapon}")
 
-# hp_boss_r = races_in_games.index(boss_race)
-# hp_boss_c = character_classes.index(boss_character)
-# damage_boss = weapons_list.index(boss_weapon)
 
-# full_hp_boss = hp_boss_r + hp_boss_c + random.randint(1, 100)
+hp_boss_r = races_in_games.index(boss_race)
+hp_boss_c = character_classes.index(boss_character)
+damage_boss = weapons_list.index(boss_weapon)
 
-# if full_hp_boss < 50:
-#     full_hp_boss += random.randint(30, 100)
+full_hp_boss = hp_boss_r + hp_boss_c + random.randint(1, 100)
 
-# full_damage = hp_boss_c + damage_boss + random.randint(1, 100)
+if full_hp_boss < 50:
+    full_hp_boss += random.randint(30, 100)
 
-# # print(hp_boss_r)
-# # print(hp_boss_c)
-# print(f"Full HP Boss: {full_hp_boss}")
-# print(f"Full Damage Boss: {full_damage}")
+full_damage = hp_boss_c + damage_boss + random.randint(1, 100)
+
+# print(hp_boss_r)
+# print(hp_boss_c)
+print(f"Full HP Boss: {full_hp_boss}")
+print(f"Full Damage Boss: {full_damage}")
 
 
 
