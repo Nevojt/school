@@ -1,6 +1,6 @@
 from art import alphabet, logo
 print(logo)
-# Commit the changes
+
  
 def caesar(start_text, shift_amount, cipher_direction):
     
