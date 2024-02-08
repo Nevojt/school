@@ -51,7 +51,7 @@ def calculator():
     
     print(f"{num1} {operation_symbol} {num2} = {answer}")
     
-    if input("Type 'y' to continue calculating with {amswer}, or type 'no' to start new calculation: ") == "y":
+    if input(f"Type 'y' to continue calculating with {answer}, or type 'no' to start new calculation: ") == "y":
       num1 = answer
     else:
       should_continue = False

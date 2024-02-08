@@ -29,7 +29,7 @@
 # print(f"User heal: {user_brok}")
 # print(f"Boss heal: {boss_brok}")
 
-#  ========== First Grupp ==========
+#  ========== First Group ==========
 
 from info_her import races_in_games, character_classes, weapons_list
 import random
@@ -78,7 +78,7 @@ print(f"Full Damage Boss: {full_damage}")
 
 
 
-#  ========== Second Grupp ==========
+#  ========== Second Group ==========
 
 from info_her import races_in_games, character_classes, weapons_list
 import random
