@@ -40,3 +40,7 @@ from random import randint
 # print(len(count))
 # print(len(len_count))
 
+hp_user = user()[0]
+damage_user = user()[1]
+print(hp_user)
+print(damage_user)
