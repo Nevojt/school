@@ -34,7 +34,7 @@
 from info_her import races_in_games, character_classes, weapons_list
 import random
 
-# boss = f"{random.choice(races_in_games)} {random.choice(character_classes)} {random.choice(weapons_list)}"
+boss = f"{random.choice(races_in_games)} {random.choice(character_classes)} {random.choice(weapons_list)}"
 
 def boss():
     print("\n==========================\n")
@@ -64,7 +64,7 @@ def boss():
     print(f"Full Damage Boss: {full_damage}")
 
 # User Block
-# print("\n==========================\n")
+print("\n==========================\n")
 def user():
     print("\n==========================\n")
     user_race = random.choice(races_in_games)
@@ -90,9 +90,9 @@ def user():
     print(f"Full HP Boss: {full_hp_user}")
     print(f"Full Damage Boss: {full_damage_user}")
 
-# boss()
-# user()
-# boss()
+boss()
+user()
+boss()
 
 
 
@@ -107,38 +107,63 @@ def user():
 
 #  ========== Second Group ==========
 
-# from info_her import races_in_games, character_classes, weapons_list
-# import random
+from info_her import races_in_games, character_classes, weapons_list
+import random
 
-# # Crated Boss 
+def boss():
+    print("\n==========================\n")
+    # Crated Boss 
+    boss_race = random.choice(races_in_games)
+    boss_character = random.choice(character_classes)
+    boss_weapon = random.choice(weapons_list)
 
-# boss_race = random.choice(races_in_games)
-# boss_character = random.choice(character_classes)
-# boss_weapon = random.choice(weapons_list)
+    print(f"Boss rase: {boss_race}")
+    print(f"Boss character: {boss_character}")
+    print(f"Boss weapon: {boss_weapon}")
 
-# print(f"Boss rase: {boss_race}")
-# print(f"Boss character: {boss_character}")
-# print(f"Boss weapon: {boss_weapon}")
+    boss_hp_r = races_in_games.index(boss_race)
+    boss_hp_c = character_classes.index(boss_character)
+    damage_weapon_boss = weapons_list.index(boss_weapon)
 
-# boss_hp_r = races_in_games.index(boss_race)
-# boss_hp_c = character_classes.index(boss_character)
-# damage_weapon_boss = weapons_list.index(boss_weapon)
+    full_hp_boss = boss_hp_r + boss_hp_c + random.randint(1, 100)
+    full_damage_boss = damage_weapon_boss + boss_hp_c + random.randint(1, 100)
 
-# full_hp_boss = boss_hp_r + boss_hp_c + random.randint(1, 100)
-# full_damage_boss = damage_weapon_boss + boss_hp_c + random.randint(1, 100)
+    if full_hp_boss < 50:
+        full_hp_boss = 50
+        
+    full_hp_boss += random.randint(30, 100)
 
-# if full_hp_boss < 50:
-#     full_hp_boss = 50
+    print(f"Full HP Boss: {full_hp_boss}")
+    print(f"Full Damage Boss: {full_damage_boss}")
+
+
+# Created User
+def user():
+    print("\n==========================\n")
+    user_race = random.choice(races_in_games)
+    user_character = random.choice(character_classes)
+    user_weapon = random.choice(weapons_list)
+
+    print(f"User race: {user_race}")
+    print(f"User character: {user_character}")
+    print(f"User weapon: {user_weapon}")
+
+
+    hp_user_r = races_in_games.index(user_race)
+    hp_user_c = character_classes.index(user_character)
+    damage_user = weapons_list.index(user_weapon)
+
+    full_hp_user = hp_user_r + hp_user_c + random.randint(1, 100)
+
+    if full_hp_user < 50:
+        full_hp_user += random.randint(30, 100)
+
+    full_damage_user = hp_user_c + damage_user + random.randint(1, 100)
+
+    print(f"Full HP Boss: {full_hp_user}")
+    print(f"Full Damage Boss: {full_damage_user}")
     
-# full_hp_boss += random.randint(30, 100)
-
-# print(f"Full HP Boss: {full_hp_boss}")
-# print(f"Full Damage Boss: {full_damage_boss}")
-
-# # Created User
-# user_race = ...
-# user_character = ...
-# user_weapon = ...
-
+# user()
+# boss()
 
 
