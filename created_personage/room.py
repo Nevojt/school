@@ -40,7 +40,14 @@ from random import randint
 # print(len(count))
 # print(len(len_count))
 
-hp_user = user()[0]
-damage_user = user()[1]
+boss_all = boss()
+hp_boss = boss_all[0]
+damage_boss = boss_all[1]
+print(hp_boss)
+print(damage_boss)
+
+user_all = user()
+hp_user = user_all[0]
+damage_user = user_all[1]
 print(hp_user)
 print(damage_user)

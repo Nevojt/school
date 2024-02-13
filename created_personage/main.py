@@ -133,8 +133,8 @@ def boss():
         
     full_hp_boss += random.randint(30, 100)
 
-    # print(f"Full HP Boss: {full_hp_boss}")
-    # print(f"Full Damage Boss: {full_damage_boss}")
+    print(f"Full HP Boss: {full_hp_boss}")
+    print(f"Full Damage Boss: {full_damage_boss}")
     return full_hp_boss, full_damage_boss
 
 
