@@ -65,15 +65,34 @@ from random import randint
 boss_all = boss()
 hp_boss = boss_all[0]
 damage_boss = boss_all[1]
-print(hp_boss)
-print(damage_boss)
+# print(hp_boss)
+# print(damage_boss)
 
 user_all = user()
 hp_user = user_all[0]
 damage_user = user_all[1]
-print(hp_user)
-print(damage_user)
+# print(hp_user)
+# print(damage_user)
 
 print()
-hp_boss = hp_boss - damage_user
-print(hp_boss)
+while True:
+    choose = input("Choose Attack or Defend: A or D? ")
+    if choose == "A":
+    # Attack User
+        hp_boss = hp_boss - damage_user
+        if hp_boss <= 0:
+            print("You Vin!")
+            break
+        
+    elif choose == "D":
+        hp_user += int(hp_user * 0.25)
+        
+
+    # Attack Boss
+    print()
+    hp_user = hp_user - damage_boss
+    if hp_user <= 0:
+        print("You have died!")
+        break
+    print(f"HP User: {hp_user}")
+    print(f"HP Boss: {hp_boss}")

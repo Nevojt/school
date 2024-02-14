@@ -161,8 +161,8 @@ def user():
 
     full_damage_user = hp_user_c + damage_user + random.randint(1, 100)
 
-    print(f"Full HP Boss: {full_hp_user}")
-    print(f"Full Damage Boss: {full_damage_user}")
+    print(f"Full HP User: {full_hp_user}")
+    print(f"Full Damage User: {full_damage_user}")
     return full_hp_user, full_damage_user
     
 # user()
