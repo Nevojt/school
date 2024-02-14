@@ -40,6 +40,28 @@ from random import randint
 # print(len(count))
 # print(len(len_count))
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 boss_all = boss()
 hp_boss = boss_all[0]
 damage_boss = boss_all[1]
@@ -51,3 +73,7 @@ hp_user = user_all[0]
 damage_user = user_all[1]
 print(hp_user)
 print(damage_user)
+
+print()
+hp_boss = hp_boss - damage_user
+print(hp_boss)
