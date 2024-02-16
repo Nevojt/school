@@ -90,19 +90,21 @@ while True:
         # full attack user
         if user_attack == 0:
             hp_boss -= damage_user
-            
-            
+            print("Full attack user 💪")
+             
         # Block user attack + 25 % HP boss
         elif user_attack == 1:
-            hp_boss -= damage_user - (hp_boss * 0.25)
+            hp_boss -= damage_user - int(damage_user * 0.25)
+            print("Boss blocked 25% of your attack 😭")
             
         #  Dodged user attack + from 10 HP to full attack user
         elif user_attack == 2:
             hp_boss -= damage_user - (hp_boss + randint(10, damage_user))
+            print("Boss dodger your attack 😩")
             
         #  if HP boss is 0 stop game
         if hp_boss <= 0:
-            print("You Win!")
+            print("You Win! 🤩🤩🤩")
             break
      
     #  User defend + 25% HP
@@ -115,13 +117,13 @@ while True:
 
     # Attack Boss
     print()
-    print(f"The boss attacks the user for {damage_boss} HP\n")
+    print(f"The boss attacks 😈😈 the user for {damage_boss} HP\n")
     hp_user = hp_user - damage_boss
     if hp_user <= 0:
-        print("You have died!")
+        print("You have died! 💀")
         break
     
     
     
-    print(f"HP User: {hp_user}")
-    print(f"HP Boss: {hp_boss}")
+    print(f"HP User 👀: {hp_user}")
+    print(f"HP Boss 😈: {hp_boss}")
