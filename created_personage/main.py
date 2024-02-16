@@ -126,7 +126,7 @@ def boss():
     damage_weapon_boss = weapons_list.index(boss_weapon)
 
     full_hp_boss = boss_hp_r + boss_hp_c + random.randint(1, 100)
-    full_damage_boss = damage_weapon_boss + boss_hp_c + random.randint(1, 100)
+    full_damage_boss = damage_weapon_boss + boss_hp_c + random.randint(10, 30)
 
     if full_hp_boss < 50:
         full_hp_boss = 50
@@ -159,7 +159,7 @@ def user():
     if full_hp_user < 50:
         full_hp_user += random.randint(30, 100)
 
-    full_damage_user = hp_user_c + damage_user + random.randint(1, 100)
+    full_damage_user = hp_user_c + damage_user + random.randint(10, 30)
 
     print(f"Full HP User: {full_hp_user}")
     print(f"Full Damage User: {full_damage_user}")

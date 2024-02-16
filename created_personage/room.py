@@ -74,25 +74,54 @@ damage_user = user_all[1]
 # print(hp_user)
 # print(damage_user)
 
+# TODO:
+# 1. Boss defend
+# 2. Boss counterattack % attack
+# 3. Boss dodged
+
 print()
 while True:
-    choose = input("Choose Attack or Defend: A or D? ")
+    choose = input("Choose Attack or Defend or Dodged: A or D or G?\n")
+    # User attack
     if choose == "A":
-    # Attack User
-        hp_boss = hp_boss - damage_user
-        if hp_boss <= 0:
-            print("You Vin!")
-            break
+        # random choose 
+        user_attack = randint(0, 2)
         
+        # full attack user
+        if user_attack == 0:
+            hp_boss -= damage_user
+            
+            
+        # Block user attack + 25 % HP boss
+        elif user_attack == 1:
+            hp_boss -= damage_user - (hp_boss * 0.25)
+            
+        #  Dodged user attack + from 10 HP to full attack user
+        elif user_attack == 2:
+            hp_boss -= damage_user - (hp_boss + randint(10, damage_user))
+            
+        #  if HP boss is 0 stop game
+        if hp_boss <= 0:
+            print("You Win!")
+            break
+     
+    #  User defend + 25% HP
     elif choose == "D":
         hp_user += int(hp_user * 0.25)
-        
+    
+    #  User dodged + from 10 HP to full attack boss
+    elif choose == "G":
+        hp_user += randint(10, damage_boss)       
 
     # Attack Boss
     print()
+    print(f"The boss attacks the user for {damage_boss} HP\n")
     hp_user = hp_user - damage_boss
     if hp_user <= 0:
         print("You have died!")
         break
+    
+    
+    
     print(f"HP User: {hp_user}")
     print(f"HP Boss: {hp_boss}")
