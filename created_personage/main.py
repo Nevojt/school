@@ -135,6 +135,7 @@ def boss():
 
     print(f"Full HP Boss: {full_hp_boss}")
     print(f"Full Damage Boss: 😜")
+    
     return full_hp_boss, full_damage_boss
 
 
@@ -163,6 +164,7 @@ def user():
 
     print(f"Full HP User: {full_hp_user}")
     print(f"Full Damage User: {full_damage_user}")
+    
     return full_hp_user, full_damage_user
     
 # user()
