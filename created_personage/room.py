@@ -37,7 +37,7 @@
 
 # second
 from main import boss, user
-from random import randint
+from random import randint, uniform
 
 
 boss_all = boss()
@@ -63,18 +63,29 @@ while True:
         if boss_hp <= 0:
             print("You Won!")
             break
-    print(f"HP Boss: {boss_hp}")
+    
+    elif choose == "d":
+        boss_damage -= boss_damage * 0.3
+        
+    elif choose == "g":
+        boss_damage -= randint(10, boss_damage)
 
-
-
+        boss_hp -= user_damage * uniform(0.3, 0.8)
+        if boss_hp <= 0:
+            print("You Won!")
+            break
+        
+    
 
 # Attack Boss
     user_hp -= boss_damage
     if user_hp <= 0:
         print("You died")
         break
-        
     
+    
+    print(f"HP Boss: {boss_hp}")  
+    print(f"DefendingBoss: {boss_damage}")
     print(f"HP User: {user_hp}")
 
 

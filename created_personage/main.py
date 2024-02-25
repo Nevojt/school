@@ -156,11 +156,12 @@ def user():
     damage_user = weapons_list.index(user_weapon)
 
     full_hp_user = hp_user_r + hp_user_c + random.randint(1, 100)
-
+    full_damage_user = hp_user_c + damage_user + random.randint(10, 30)
+    
     if full_hp_user < 50:
         full_hp_user += random.randint(30, 100)
 
-    full_damage_user = hp_user_c + damage_user + random.randint(10, 30)
+    
 
     print(f"Full HP User: {full_hp_user}")
     print(f"Full Damage User: {full_damage_user}")
