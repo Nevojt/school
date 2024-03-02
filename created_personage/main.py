@@ -167,8 +167,5 @@ def user():
     print(f"Full Damage User: {full_damage_user}")
     
     return full_hp_user, full_damage_user
-    
-# user()
-# boss()
 
 

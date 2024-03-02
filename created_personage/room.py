@@ -1,23 +1,41 @@
-# from main import boss, user
+from main import boss, user
 
-# boss_all = boss()
-# boss_hp = boss_all[0]
-# boss_damage = boss_all[1]
-# user()
+boss_all = boss()
+boss_hp = boss_all[0]
 
-# user_all = user()
-# user_hp = user_all[0]
-# user_damage = user_all[1]
-
+user_all = user()
+user_hp = user_all[0]
 
 # print(boss_hp)
 # print(boss_damage)
-
+# print()
 
 # print(user_hp)
 # print(user_damage)
 
 
+# while True:
+#     boss_damage = boss_all[1]
+#     user_damage = user_all[1]
+    
+#     choose = input("Choose \nA -> Attack\nD -> Defend\nG -> Dodge\n-> ").lower()
+#     # Attack for user
+#     if choose == "a":
+#         boss_hp -= user_damage
+#         if boss_hp <= 0:
+#             print("You Won!")
+#             break
+        
+    
+#     else: 
+#         print("Bad choose")   
+        
+#     # Attack for boss
+#     user_hp -= boss_damage
+#     if user_hp <= 0:
+#         print("You Lose!")
+#         break
+        
 
 
 
@@ -34,30 +52,26 @@
 
 
 
-
-# second
+# # second
 from main import boss, user
 from random import randint, uniform
 
 
 boss_all = boss()
 boss_hp = boss_all[0]
-boss_damage = boss_all[1]
-
-print(boss_hp)
-print(boss_damage)
+# boss_damage = boss_all[1]
 
 user_all = user()
 user_hp = user_all[0]
-user_damage = user_all[1]
-
-print(user_hp)
-print(user_damage)
+# user_damage = user_all[1]
 
 print()
 # Attack User
 while True:
-    choose = input("Choose Attack -> A: ").lower()
+    boss_damage = boss_all[1] # Оновлення Damage boss кожен раз при початку циклу
+    user_damage = user_all[1] # Оновлення Damage user кожен раз при початку циклу
+    
+    choose = input("Choose\n-> A == Attack\n-> D == Defend\n-> G == Dodge\n-> ").lower()
     if choose == "a":
         boss_hp -= user_damage
         if boss_hp <= 0:
@@ -69,24 +83,45 @@ while True:
         
     elif choose == "g":
         boss_damage -= randint(10, boss_damage)
-
         boss_hp -= user_damage * uniform(0.3, 0.8)
         if boss_hp <= 0:
             print("You Won!")
             break
+    else:
+        print("Bad choice!")
         
     
 
 # Attack Boss
-    user_hp -= boss_damage
-    if user_hp <= 0:
-        print("You died")
-        break
+    choose_boss = randint(0,2)
+    
+    if choose_boss == 0:
+        print("attack")
+        user_hp -= boss_damage
+        if user_hp <= 0:
+            print("You died")
+            break
+        
+    elif choose_boss == 1:
+        print("defend")
+        boss_hp += user_damage * 0.3
+        if user_hp <= 0:
+            print("You Bad !")
+            break
+        
+    elif choose_boss == 2:
+        print("dodge")
+        boss_hp += randint(10, user_damage)
+        user_hp -= boss_damage * uniform(0.3, 0.8)
+        if user_hp <= 0:
+            print("You Lose!")
+            break
     
     
     print(f"HP Boss: {boss_hp}")  
     print(f"DefendingBoss: {boss_damage}")
     print(f"HP User: {user_hp}")
+    print()
 
 
 
