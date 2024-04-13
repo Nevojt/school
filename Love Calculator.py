@@ -1,3 +1,46 @@
+print("Welcome to love calculator!\n")
+
+first_name = input("What is first name? ").lower()
+second_name = input("What is second name? ").lower()
+
+print("First name: " + first_name)
+print("Second name: " + second_name)
+
+name = first_name + second_name
+# true love
+
+t = name.count("t")
+r = name.count("r")
+u = name.count("u")
+e = name.count("e")
+one = str(t + r + u + e)
+
+l = name.count("l")
+o = name.count("o")
+v = name.count("v")
+e = name.count("e")
+two = str(l + o + v + e)
+
+result =int(one + two)
+
+if result <= 30:
+    print("Don't Love!!!")
+    
+elif result <= 60:
+    print("You best friends!!!!")
+    
+else:
+    print("You true love!!!")
+
+
+
+
+
+
+
+
+
+
 # # print("Welcome to the Love Calculator!")
 # # name1 = input("What is your name? \n")
 # # name2 = input("What is their name? \n")
@@ -70,38 +113,38 @@
 
 
 
-print("Welcome to Love Calculator!!!")
+# print("Welcome to Love Calculator!!!")
 
-name_1 = input("First name:\n")
-name_2 = input("Second name:\n")
+# name_1 = input("First name:\n")
+# name_2 = input("Second name:\n")
 
-name_3 = (name_1 + name_2).lower()
+# name_3 = (name_1 + name_2).lower()
 
-t = name_3.count("t")
-r = name_3.count("r")
-u = name_3.count("u")
-e = name_3.count("e")
+# t = name_3.count("t")
+# r = name_3.count("r")
+# u = name_3.count("u")
+# e = name_3.count("e")
 
-true = str(t + r + u + e)
+# true = str(t + r + u + e)
 
-l = name_3.count("l")
-o = name_3.count("o")
-v = name_3.count("v")
-e = name_3.count("e")
+# l = name_3.count("l")
+# o = name_3.count("o")
+# v = name_3.count("v")
+# e = name_3.count("e")
 
-love = str(l + o + v + e)
+# love = str(l + o + v + e)
 
-result = int(true + love)
-print(result)
+# result = int(true + love)
+# print(result)
 
-if result < 10:
-    print("Sorry this is not love...")
+# if result < 10:
+#     print("Sorry this is not love...")
     
-elif result >= 11 or result <= 90:
-    print("This is true love!!!!")
+# elif result >= 11 or result <= 90:
+#     print("This is true love!!!!")
     
-else:
-    print("This is SUPER LOVE!!!!!!!")
+# else:
+#     print("This is SUPER LOVE!!!!!!!")
 
 
 
