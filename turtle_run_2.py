@@ -11,6 +11,10 @@ colors = ["red", "orange", "yellow", "green", "blue", "purple"]
 y_position = [-70, -40, -10, 20, 50, 80]
 all_turtle = []
 
+pen = Turtle()
+pen.hideturtle()
+pen.penup()
+pen.goto(x=-220, y=170)
 
 #  Created turtle 
 for turtle_index in range(0, 6):
@@ -30,9 +34,9 @@ while is_race_on:
             is_race_on = False
             wining_color = turtle.pencolor()
             if wining_color == user_bet:
-                print(f"You've won! The {wining_color} turtle is the winner!")
+                pen.write(f"You've won! The {wining_color} turtle is the winner!", font=("Arial", 16, "normal"))
             else:
-                print(f"You've lost! The {wining_color} turtle is the winner!")
+                pen.write(f"You've lost! The {wining_color} turtle is the winner!", font=("Arial", 16, "normal"))
 
         rand_distance = random.randint(0, 10)
         turtle.forward(rand_distance)

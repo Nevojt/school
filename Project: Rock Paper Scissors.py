@@ -69,7 +69,7 @@ elif bot == 2 and user == 1:
   print("You\n", paper)
   print("You lose!!!")
 
-# Всф інші випадки
+# Всi інші випадки
 else:
   print("You lose the game!!!")
 
