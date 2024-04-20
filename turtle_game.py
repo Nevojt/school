@@ -4,15 +4,15 @@ screen = Screen()
 tim = Turtle()
 
 
-# for i in range(400):
-#     if i % 2 == 0:
-#         tim.color("red")
-#         tim.forward(30)
-#         tim.left(60)
-#     else:
-#         tim.color("blue")
-#         tim.forward(30)
-#         tim.right(60)
+for i in range(400):
+    if i % 2 == 0:
+        tim.color("red")
+        tim.forward(30)
+        tim.left(60)
+    else:
+        tim.color("blue")
+        tim.forward(30)
+        tim.right(60)
 tim.speed(10)    
 for steps in range(100):
     for c in ('blue', 'red', 'green'):
