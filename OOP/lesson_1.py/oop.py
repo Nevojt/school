@@ -23,6 +23,14 @@ class Course:
         else:
             return False
         
+    def get_average_student(self):
+        value = 0
+        for students in self.students:
+            value += students.get_grade()
+            
+        return value / len(self.students)
+    
+        
 
 
 
@@ -35,9 +43,9 @@ course = Course("Science", 2)
 course.add_student(st1)
 course.add_student(st2)
 
-print(course.students)
+print(course.students[1].age)
 
-
+print(course.get_average_student())
 
 
 
