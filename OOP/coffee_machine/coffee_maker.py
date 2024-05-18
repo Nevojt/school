@@ -9,9 +9,9 @@ class CoffeeMaker:
         
     def report(self):
         # Відображаємо кількість ресурсів
-        print(f"Water: {self.resources["water"]} ml")
-        print(f"Milk: {self.resources["milk"]} ml")
-        print(f"Coffee: {self.resources["coffee"]} ml")
+        print(f"Water: {self.resources['water']} ml")
+        print(f"Milk: {self.resources['milk']} ml")
+        print(f"Coffee: {self.resources['coffee']} mg")
         
     def is_resources(self, drink):
         # Перевіряємо чи є достатньо ресурсів для приготування кави
@@ -20,7 +20,7 @@ class CoffeeMaker:
             if drink.ingredients[item] > self.resources[item]:
                 print(f"Sorry there is not enough {item}")
                 can_make = False
-            return can_make
+        return can_make
         
     def make_coffee(self, order):
         #  Віднімаємо інгредієнти коли робимо каву
