@@ -2,39 +2,71 @@
 Ця гра демонструє, як можна використовувати функції для розділення логіки програми на кілька частин"""
 
 
-import random
+# import random
 
-def get_user_guess():
-    return int(input("Вгадай число від 1 до 10: "))
+# def get_user_guess():
+#     return int(input("Вгадай число від 1 до 10: "))
 
-def check_guess(guess, answer):
-    if guess == answer:
-        print("Вітаю, ти вгадав!")
-        return True
-    elif guess < answer:
-        print("Замало, спробуй ще раз.")
-    else:
-        print("Забагато, спробуй ще раз.")
-    return False
+# def check_guess(guess, answer):
+#     if guess == answer:
+#         print("Вітаю, ти вгадав!")
+#         return True
+#     elif guess < answer:
+#         print("Замало, спробуй ще раз.")
+#     else:
+#         print("Забагато, спробуй ще раз.")
+#     return False
 
-def guess_number_game():
-    answer = random.randint(1, 10)
-    attempts = 0
-    while attempts < 3:
-        guess = get_user_guess()
-        if check_guess(guess, answer):
-            break
-        attempts += 1
-    else:
-        print(f"На жаль, ти не вгадав. Правильна відповідь була {answer}.")
+# def guess_number_game():
+#     answer = random.randint(1, 10)
+#     attempts = 0
+#     while attempts < 3:
+#         guess = get_user_guess()
+#         if check_guess(guess, answer):
+#             break
+#         attempts += 1   
+#     else:
+#         print(f"На жаль, ти не вгадав. Правильна відповідь була {answer}.")
 
-guess_number_game()
+# guess_number_game()
+
+
+
+
+
+
 
 
 """2. Програма зі списками: Підрахунок символів
 Ця програма показує, як можна використовувати списки для зберігання даних і простий перебір для аналізу тексту."""
 
-# def count_characters(text):
+def count_characters(text):
+    count = []
+    for char in set(text):
+        count.append((char, text.count(char)))
+    return count
+
+text = input("Please write text: ")
+char_count = count_characters(text)
+print("Кількість кожного символу в тексті:")
+
+for char, count in char_count:
+    print(f"'{char}': {count}")
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 #     count = []
 #     for char in set(text):
 #         count.append((char, text.count(char)))
