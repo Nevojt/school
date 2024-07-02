@@ -50,15 +50,6 @@ while is_race:
 
 
 
-
-
-
-
-
-
-
-
-
 screen.exitonclick()
 
 
