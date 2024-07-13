@@ -26,7 +26,7 @@ try:
             missing_state = [state for state in all_state if state not in guesses_state]
             break
         
-        if answer_state in all_state:
+        elif answer_state in all_state:
             guesses_state.append(answer_state)
             t = turtle.Turtle()
             t.color("red")
